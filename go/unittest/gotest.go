@@ -3,11 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(NewTest("hello world").name)
-	fmt.Println(NewTest("hello world").string())
+	test := NewTest("hello world")
+	fmt.Println(test.name)
+	fmt.Println(test.string())
 }
 
 func myFunc(param string) error {
+	fmt.Println("myFunc: ", param)
 	return nil
 }
 

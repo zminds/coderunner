@@ -1,12 +1,19 @@
 package main
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/google/go-containerregistry/pkg/name"
+	"golang.org/x/tools/go/analysis/passes/nilfunc"
+)
 
 func Test_main(t *testing.T) {
 	tests := []struct {
 		name string
-	}{
-		Println("go test run")
+	}
+	{
+		{name: "test"},
+		{name: "t2"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -24,7 +31,16 @@ func Test_myFunc(t *testing.T) {
 		args    args
 		wantErr bool
 	}{
-		// TODO: Add test cases.
+		{
+			name:    "test",
+			args:    args{param: "test"},
+			wantErr: false,
+		},
+		{
+			name:    "123",
+			args:    args{param: "123"},
+			wantErr: false,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
