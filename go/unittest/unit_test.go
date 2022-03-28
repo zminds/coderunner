@@ -1,17 +1,11 @@
 package main
 
-import (
-	"testing"
-
-	"github.com/google/go-containerregistry/pkg/name"
-	"golang.org/x/tools/go/analysis/passes/nilfunc"
-)
+import "testing"
 
 func Test_main(t *testing.T) {
 	tests := []struct {
 		name string
-	}
-	{
+	}{
 		{name: "test"},
 		{name: "t2"},
 	}
@@ -35,6 +29,11 @@ func Test_myFunc(t *testing.T) {
 			name:    "test",
 			args:    args{param: "test"},
 			wantErr: false,
+		},
+		{
+			name:    "5678",
+			args:    args{param: "5678"},
+			wantErr: true,
 		},
 		{
 			name:    "123",
