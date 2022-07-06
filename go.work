@@ -1,1 +1,10 @@
 go 1.18
+
+use (
+	./go/golang/codefetch
+	./go/golang/init/sequenceinit
+	./go/node_exporter/filesystem
+	./go/pv
+	./go/slice
+	./go/unittest
+)
