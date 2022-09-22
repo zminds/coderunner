@@ -8,4 +8,5 @@ use (
 	./go/localProvisioner/pv
 	./go/node_exporter/filesystemCollector
 	./go/osg/encrption_key
+	./go/kafka/producer
 )
